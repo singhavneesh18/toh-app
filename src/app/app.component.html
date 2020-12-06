@@ -1,3 +1,9 @@
-<div class="title">{{title}}</div>
-<app-heroes></app-heroes>
-<app-messages></app-messages>
+<!-- <div class="title">{{title}}</div>
+<nav>
+    <a routerLink="/" routerLinkActive=false>Home Page</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="/heroes">See heroes list</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="/messages">Click to see traverse history</a>
+</nav> -->
+<button (click)="goBack()">Back</button>
+<router-outlet></router-outlet>
+

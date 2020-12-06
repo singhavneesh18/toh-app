@@ -1,0 +1,11 @@
+<div>
+    <div>Dashoboard for tour of heroes</div>
+    <ul>
+        <li *ngFor="let hero of heroList">
+            <nav>
+                <a routerLink="/hero/{{hero.id}}">Hero id: {{hero.id}}</a>
+            </nav>
+            <span>Hero name: {{hero.name}}</span>
+        </li>
+    </ul>
+</div>
