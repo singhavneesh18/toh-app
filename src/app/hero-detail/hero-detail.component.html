@@ -1,8 +1,9 @@
 <div>
     <p class="title">Hero Detail page</p>
     <p>
+        <span>{{selectedHero?.name | uppercase}}</span><br>
         <span>Hero id: {{selectedHero?.id}}</span><br>
-        <span>Hero name: {{selectedHero?.name | uppercase}}</span><br>
+        <span><input type="text" [(ngModel)]="selectedHero.name"></span><br>
         <!-- <span><button (click)="updateHero()">Edit</button></span>
         <span><button (click)="deleteHero(selectedHero)">Delete</button></span> -->
     </p>

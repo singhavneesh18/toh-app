@@ -1,7 +1,4 @@
 <div  *ngIf= "messageService.messages.length > 0; else showNoDataMessage">
-    <p>
-        <button (click)="messageService.clear()">clear messages</button>
-    </p>
     <ol >
         <li *ngFor="let message of messageService.messages">
             <span>{{message}}</span>
@@ -9,5 +6,8 @@
     </ol>
 </div>
 <ng-template #showNoDataMessage>
-    No history 
+    
 </ng-template>
+<p *ngIf= "messageService.messages.length > 0">
+    <button (click)="messageService.clear()">clear messages</button>
+</p>
