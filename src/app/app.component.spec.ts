@@ -10,22 +10,22 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+  it('should create the app',() => {
+    const comp = TestBed.createComponent(AppComponent);
+    const inst = comp.componentInstance;
+    expect(inst).toBeTruthy();
   });
 
-  it(`should have as title 'toh-app'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('toh-app');
+  it(`should have title with default value 'Tour of heroes app'`, ()=> {
+    const comp = TestBed.createComponent(AppComponent);
+    const inst = comp.componentInstance;
+    expect(inst.title).toEqual('Tour of heroes app');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('toh-app app is running!');
+  it('should render title on template', ()=> {
+    const comp = TestBed.createComponent(AppComponent);
+    comp.detectChanges();
+    const htmlElements = comp.nativeElement;
+    expect(htmlElements.querySelector('div').textContent).toEqual('Tour of heroes app');
   });
 });

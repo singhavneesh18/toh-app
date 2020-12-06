@@ -1,5 +1,6 @@
 {
   "extends": "tslint:recommended",
+  "strictPropertyInitialization": false,
   "rulesDirectory": [
     "codelyzer"
   ],
