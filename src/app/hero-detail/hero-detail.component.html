@@ -4,9 +4,13 @@
         <span>{{selectedHero?.name | uppercase}}</span><br>
         <span>Hero id: {{selectedHero?.id}}</span><br>
         <span><input type="text" [(ngModel)]="selectedHero.name"></span><br>
+        <!-- <on-changes [hero]="hero"></on-changes> -->
         <!-- <span><button (click)="updateHero()">Edit</button></span>
         <span><button (click)="deleteHero(selectedHero)">Delete</button></span> -->
+        
     </p>
+    <button [disabled]="buttonDiabled" (click)="buttonDiabled = true;">Disable Check</button>
+    <button (click)="buttonDiabled = false;">Disable Check</button>
     <!-- <p *ngIf="editMode">
         Update hero name here: <span><input type="text" [(ngModel)]= "selectedHero.name" placeholder="hero.name"></span><br>
         <span><button (click)="saveChanges(selectedHero)">Save</button></span>

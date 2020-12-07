@@ -13,10 +13,11 @@ const routes: Routes = [
   {path: 'messages', component: MessagesComponent},
   {path: 'heroes', component: HeroesComponent},
   {path: 'hero/:id', component: HeroDetailComponent}
+  // ,{path: '**', component: PageNotFoundComponent} // For other urls
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

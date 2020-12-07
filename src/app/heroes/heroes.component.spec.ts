@@ -24,16 +24,16 @@ describe('HeroesComponent', () => {
   });
 
   it('should have hero property with id: 1', ()=> {
-    expect(component.hero.id).toEqual(1);
+    expect(component.selectedHero.id).toEqual(1);
   });
 
   it('should have hero propert with name: Avneesh', ()=> {
-    expect(component.hero.name).toEqual('Avneesh');
+    expect(component.selectedHero.name).toEqual('Avneesh');
   });
 
   it('should have title as hero page',() => {
     const content = <string>fixture.nativeElement.querySelector('.title').textContent;
-    console.log(content);
+    // console.log(content);
     expect(content).toEqual('Hero Page');
   });
 
